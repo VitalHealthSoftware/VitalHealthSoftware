@@ -1,6 +1,7 @@
 /* Generic */
 body {
 font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px;
+/*
 scrollbar-3dlight-color:#F0F0EE;
 scrollbar-arrow-color:#676662;
 scrollbar-base-color:#F0F0EE;
@@ -9,6 +10,7 @@ scrollbar-face-color:#E0E0DD;
 scrollbar-highlight-color:#F0F0EE;
 scrollbar-shadow-color:#F0F0EE;
 scrollbar-track-color:#F5F5F5;
+*/
 background:#F0F0EE;
 padding:0;
 margin:8px 8px 0 8px;
@@ -115,3 +117,90 @@ h3 {font-size:14px;}
 #colorpicker #namedcolors a {display:block; float:left; width:10px; height:10px; margin:1px 1px 0 0; overflow:hidden;}
 #colorpicker #colornamecontainer {margin-top:5px;}
 #colorpicker #picker_panel fieldset {margin:auto;width:325px;}
+
+
+
+/* extra */
+
+
+
+body, html {
+	background: #FFF;
+}
+
+.tabs {
+	background: none;
+	height: 23px;
+}
+
+.panel_wrapper {
+	border: none;
+}
+
+div.tabs ul {
+	position: relative;
+	padding: 2px 0 0 0;
+	height: 24px;
+}
+
+div.tabs li {
+	position: relative;
+	top: 1px;
+	height: 23px;
+	margin: 0;
+	padding: 0;
+	background: url(../../../../../../../stylesheets/tabber/bg_tab_active.gif) no-repeat top left;
+	
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+}
+
+div.tabs li.current {
+	margin: 0;
+	background: url(../../../../../../../stylesheets/tabber/bg_tab_active.gif) no-repeat top left;
+	
+	opacity: 1.0;
+	filter: alpha(opacity=100);
+}
+
+div.tabs li span {
+	position: relative;
+	float: left;
+	display: block;
+	height: 21px;
+	line-height: 21px;
+	padding: 2px 8px 0 6px;
+	background: url("../../../../../../../stylesheets/tabber/bg_tabr_active.gif") no-repeat top right;
+	font-size: 11px;
+	color: #707070;
+	text-decoration: none;
+	white-space: nowrap;
+	
+}
+
+div.tabs li.current span{
+	color: black;
+	
+	background: url("../../../../../../../stylesheets/tabber/bg_tabr_active.gif") no-repeat top right;
+}
+
+div.tabs a:hover {
+	text-decoration: underline;
+}
+
+#insert, #cancel, input.button, .updateButton {
+	background: url("../../../../../../../stylesheets/resources/button-gradient.png");
+	cursor: pointer;
+	border: 1px solid #B6B9C0;
+	font-weight: normal;
+	height: 26px;
+}
+
+#insert:hover, #cancel:hover, input.button:hover, .updateButton:hover {
+	background:url("../../../../../../../stylesheets/resources/button-gradient-hover.png");
+	border-color:#818181 #E3E4E8 #E3E4E8 #818181;
+}
+
+legend, .title {
+	color: #000;
+}

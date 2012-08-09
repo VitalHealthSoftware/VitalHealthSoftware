@@ -16,12 +16,12 @@
 .defaultSkin .mceExternalClose {position:absolute; top:3px; right:3px; width:7px; height:7px; background:url(../../img/icons.gif) -820px 0}
 
 /* Layout */
-.defaultSkin table.mceLayout {border:0; border-left:1px solid #CCC; border-right:1px solid #CCC}
+.defaultSkin table.mceLayout {border:0; border-left:0px solid #CCC; border-right:0px solid #CCC}
 .defaultSkin table.mceLayout tr.mceFirst td {border-top:1px solid #CCC}
-.defaultSkin table.mceLayout tr.mceLast td {border-bottom:1px solid #CCC}
+.defaultSkin table.mceLayout tr.mceLast td {border-bottom:0px solid #CCC}
 .defaultSkin table.mceToolbar, .defaultSkin tr.mceFirst .mceToolbar tr td, .defaultSkin tr.mceLast .mceToolbar tr td {border:0; margin:0; padding:0;}
 .defaultSkin td.mceToolbar {background:#F0F0EE; padding-top:1px; vertical-align:top}
-.defaultSkin .mceIframeContainer {border-top:1px solid #CCC; border-bottom:1px solid #CCC}
+.defaultSkin .mceIframeContainer {border-top:0px solid #CCC; border-bottom:1px solid #CCC}
 .defaultSkin .mceStatusbar {background:#F0F0EE; font-family:'MS Sans Serif',sans-serif,Verdana,Arial; font-size:9pt; line-height:16px; overflow:visible; color:#000; display:block; height:20px}
 .defaultSkin .mceStatusbar div {float:left; margin:2px}
 .defaultSkin .mceStatusbar a.mceResize {display:block; float:right; background:url(../../img/icons.gif) -800px 0; width:20px; height:20px; cursor:se-resize; outline:0}
@@ -211,3 +211,76 @@
 .defaultSkin span.mce_pagebreak {background-position:0 -40px}
 .defaultSkin span.mce_restoredraft {background-position:-20px -40px}
 .defaultSkin span.mce_spellchecker {background-position:-540px -20px}
+
+
+
+/* extra */
+
+
+
+/* editor */
+span.mceEditor {
+	width: 100%;
+}
+
+.defaultSkin table {
+	background: #F0F0EE;
+}
+
+.defaultSkin iframe {
+	background: #FFF;
+}
+/* statusbar */
+.defaultSkin .mceStatusbar {
+	background: #F0F0EE;
+}
+
+/* buttons */
+.defaultSkin table.mceToolbar { background: none; }
+.defaultSkin td.mceToolbar { background: url(img/toolbar.jpg) 0 3px; }
+.defaultSkin .mceButton { border: 1px solid transparent; }
+
+.defaultSkin a.mceButtonActive, .defaultSkin a.mceButtonSelected {
+	background-color: #FFF3D5;
+	border: 1px solid #D5C89B;
+}
+
+.defaultSkin a.mceButtonEnabled:hover {
+	background-color: #FFF3D5;
+	border: 1px solid #D5C89B;
+}
+.defaultSkin table.mceLayout tr.mceFirst td {
+	border-top: none;
+}
+
+/* separator */
+.defaultSkin .mceSeparator {
+	background: url(img/separator.png);
+	margin: 0px 2px 0 2px;
+}
+
+/* color split buttons */
+.defaultSkin .mceSplitButton {
+	background: none;
+}
+
+.defaultSkin .mceSplitButton a {
+	border-color: transparent !important;
+}
+
+.defaultSkin table.mceSplitButtonEnabled:hover a.mceAction, .defaultSkin .mceSplitButtonHover a.mceAction, .defaultSkin .mceSplitButtonSelected a.mceAction,
+.defaultSkin table.mceSplitButtonEnabled:hover a.mceOpen, .defaultSkin .mceSplitButtonHover a.mceOpen, .defaultSkin .mceSplitButtonSelected a.mceOpen,
+.defaultSkin .mceColorSplitMenu a.mceMoreColors:hover {
+	background-color: #FFF3D5 !important;
+	border: 1px solid #D5C89B !important;
+}
+
+.defaultSkin table.mceSplitButtonEnabled:hover a.mceAction, .defaultSkin .mceSplitButtonHover a.mceAction, .defaultSkin .mceSplitButtonSelected a.mceAction {
+	border-width: 1px 0 1px 1px !important;
+}
+
+/* container */
+span.mceEditor.defaultSkin {
+	display: block;
+	float: left;
+}

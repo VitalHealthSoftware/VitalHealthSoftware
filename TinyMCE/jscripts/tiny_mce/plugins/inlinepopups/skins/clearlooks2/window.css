@@ -13,7 +13,10 @@
 /* Top */
 .clearlooks2 .mceTop, .clearlooks2 .mceTop div {top:0; width:100%; height:23px}
 .clearlooks2 .mceTop .mceLeft {width:6px; background:url(img/corners.gif)}
-.clearlooks2 .mceTop .mceCenter {right:6px; width:100%; height:23px; background:url(img/horizontal.gif) 12px 0; clip:rect(auto auto auto 12px)}
+
+.clearlooks2 .mceTop .mceCenter {right:6px; width:100%; height:23px; background:url(img/horizontal.gif) 12px 0;    clip:rect(auto auto auto 12px);  }
+
+
 .clearlooks2 .mceTop .mceRight {right:0; width:6px; height:23px; background:url(img/corners.gif) -12px 0}
 .clearlooks2 .mceTop span {width:100%; text-align:center; vertical-align:middle; line-height:23px; font-weight:bold}
 .clearlooks2 .mceFocus .mceTop .mceLeft {background:url(img/corners.gif) -6px 0}
@@ -87,4 +90,4 @@
 .clearlooks2 .mceAlert .mceIcon {background:url(img/alert.gif)}
 .clearlooks2 .mceConfirm .mceOk {left:50%; top:auto; margin-left: -90px}
 .clearlooks2 .mceConfirm .mceCancel {left:50%; top:auto}
-.clearlooks2 .mceConfirm .mceIcon {background:url(img/confirm.gif)}
+.clearlooks2 .mceConfirm .mceIcon {background:url(img/confirm.gif)} 
