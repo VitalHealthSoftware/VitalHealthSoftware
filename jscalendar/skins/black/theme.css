@@ -1,0 +1,219 @@
+/* Distributed as part of The Coolest DHTML Calendar
+   Author: Mihai Bazon, www.bazon.net/mishoo
+   Copyright Dynarch.com 2005, www.dynarch.com
+*/
+
+/* The main calendar widget.  DIV containing a table. */
+
+/*.calendar, */
+.blackcalendar div.calendar{
+	border: 1px solid white;
+	background-color: #2D2D2D;
+	padding: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.5);		/* Firefox/Mozilla */
+	-webkit-box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.3);	/* Safari/Chrome */
+	shadow: 0px 0px 24px rgba(0, 0, 0, 0.5);				/* Opera / W3C */
+}
+.blackcalendar .calendar table {
+	border: none; /*1px solid #B6B9C0;*/
+	font-size: 13px;
+	color: #000;
+	cursor: default;
+	width: auto; /*251px;*/
+	font-family: arial, sans-serif;
+}
+
+/* Header part -- contains navigation buttons and day names. */
+.blackcalendar .calendar .button#nav_py, 
+.blackcalendar .calendar .button#nav_pm, 
+.blackcalendar .calendar .button#nav_nm, 
+.blackcalendar .calendar .button#nav_ny
+{
+	width: 30px;
+/*	text-align: center;*/
+}
+.blackcalendar .calendar .button#nav_py div, 
+.blackcalendar .calendar .button#nav_pm div, 
+.blackcalendar .calendar .button#nav_nm div, 
+.blackcalendar .calendar .button#nav_ny div
+{
+	width: 15px;
+	height: 15px;
+	margin-left: 12px; /*7px;*/
+}
+.blackcalendar .calendar .button div
+{
+	text-align: center;
+	cursor: pointer;
+}
+.blackcalendar .calendar .button#nav_py div
+{
+	background: url("nav_py.gif") no-repeat center center;
+}
+.blackcalendar .calendar .button#nav_pm div
+{
+	background: url("nav_pm.gif") no-repeat center center;
+}
+.blackcalendar .calendar .button#nav_nm div
+{
+	background: url("nav_nm.gif") no-repeat center center;
+}
+.blackcalendar .calendar .button#nav_ny div
+{
+	background: url("nav_ny.gif") no-repeat center center;
+}
+
+.blackcalendar .calendar thead tr td {
+	border-bottom: none; /*1px solid #B6B9C0;*/
+}
+.blackcalendar .calendar thead tr.titlebar { 
+	height: 24px;
+	border-bottom: 5px solid transparent;
+}
+.blackcalendar .calendar thead tr.titlebar .title { /* This holds the current "month, year" */
+	background: transparent; /*#D4D4D4 url("title-bg.gif") repeat-x top left;*/
+	border-right: none;
+	color: white; /*#E4091F;*/
+	font-size: 13pt; /*11pt;*/
+	font-weight: bold;      /* Pressing it will take you to the current date */
+	padding-left: 35px; /*5px;*/
+	text-align: center;
+}
+.blackcalendar .calendar thead tr.titlebar td#close {
+	background: transparent; /*#D4D4D4 url("title-bg.gif") repeat-x top left;*/
+}
+.blackcalendar .calendar thead tr.titlebar td#close div {
+	background: url("close.gif") no-repeat center right;
+	height: 16px;
+	margin-right: 5px;
+}
+.blackcalendar .calendar thead .headrow { /* Row <TR> containing navigation buttons */
+	height: 24px;
+}
+.blackcalendar .calendar thead .headrow td {
+	background: none; /*#E0E0E0 url("headrow-bg.gif") repeat-x top left;*/
+	color: white;
+}
+.blackcalendar .calendar thead .weekend { /* How a weekend day name shows in header */
+  color: black; /*#E4091D;*/
+}
+.blackcalendar .calendar thead .daynames td { /* Row <TR> containing the day names */
+	background: transparent; /*#E7E7E7 url("daynames-bg.gif") repeat-x top left;*/
+	height: 24px;
+	text-align: center;
+	color: white;
+}
+.blackcalendar .calendar thead .daynames td.wn {
+	background: none; /*#DCDCDC url("week-column-bg.gif") repeat-x top left;*/
+	border-right: 1px solid white;
+}
+
+/* The body part -- contains all the days in month. */
+.blackcalendar .calendar tbody {
+	
+}
+.blackcalendar .calendar tbody .day { /* Cells <TD> containing month days dates */
+  color: black; /*#828282;*/
+  text-align: center; /*right;*/
+  padding-right: 0px; /*8px;*/
+  cursor: pointer;
+  width: 38px;
+}
+.blackcalendar .calendar tbody .day.hilite {
+	font-weight: bold;
+}
+.blackcalendar .calendar table .daysrow td {
+	border-bottom: 2px solid #2D2D2D; /*1px solid #E0E0E0;*/
+	border-right: 2px solid #2D2D2D;
+	background-color: transparent; /*#CCCCCC;*/ /*white;*/
+	background: url("week-bg.gif") no-repeat center center;
+	height: 26px;
+}
+.blackcalendar .calendar table .daysrow td.selected
+{
+	background-color: #037cf0; /*#90B0E0;*/
+	color: white; /*black;*/
+	font-weight: bold;
+}
+.blackcalendar .calendar table .daysrow td.emptycell {
+	background: none;
+}
+.blackcalendar .calendar table .daysrow td.wn {
+	color: white;
+	background: none; /*#DCDCDC url("week-nummer-bg.gif") repeat-y top left;*/
+	cursor: default;
+}
+.blackcalendar .calendar tbody td.today {
+	background: none; /*white url("today-bg.gif") no-repeat center center;*/
+	background-color: #EEEEEE;
+	color: black; /*#E4091D;*/
+}
+.blackcalendar .calendar tbody td.weekend { /* Cells showing weekend days */
+  color: black; /*#E4091D;*/
+}
+.blackcalendar .calendar tbody .emptyrow { /* Empty row (some months need less than 6 rows) */
+  display: none;
+}
+
+/* The footer part -- status bar and "Close" button */
+.blackcalendar .calendar tfoot .ttip { /* Tooltip (status bar) cell <TD> */
+	background: none; /*#DCDCDC url("footer-bg.gif") repeat-x top left;*/
+	background-color: transparent;
+	height: 21px;/*26px;*/
+	margin-top: 5px;
+	border-top: none; /*1px solid #B6B9C0;*/
+	padding-left: 8px;
+	color: white;
+}
+
+/* Combo boxes (menus that display months/years for direct selection) */
+
+.blackcalendar .calendar .calendar_combo {
+  position: absolute;
+  display: none;
+  top: 0px;
+  left: 0px;
+  width: 4em;
+  cursor: default;
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: #797979;
+  z-index: 100;
+  font-size: 90%;
+}
+
+.blackcalendar .calendar .calendar_combo .callabel,
+.blackcalendar .calendar .calendar_combo .label-IEfix {
+  text-align: center;
+  padding: 1px;
+}
+
+.blackcalendar .calendar .calendar_combo .label-IEfix {
+	width: 4em;
+}
+
+.blackcalendar .calendar td.time .hour,
+.blackcalendar .calendar td.time .minute {
+  font-family: monospace;
+}
+
+.blackcalendar .calendar td.time .ampm {
+  text-align: center;
+}
+
+.blackcalendar .calendar td.time .colon {
+  padding: 0px 2px 0px 3px;
+  font-weight: bold;
+}
+
+/* appearance-class */
+.noweekcalendar .calendar thead .daynames td.wn, 
+.noweekcalendar .calendar table .daysrow td.wn
+{
+	visibility: hidden;
+	border-right: none;
+}
